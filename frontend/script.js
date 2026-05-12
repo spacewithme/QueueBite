@@ -7,7 +7,7 @@ async function login() {
         document.getElementById("password").value;
 
     const response = await fetch(
-        "http://localhost:8080/users/login",
+        "https://queuebite-97yn.onrender.com/users/login",
         {
             method: "POST",
 
@@ -44,13 +44,14 @@ async function login() {
             .innerText = data;
     }
 }
+
 async function loadMenu() {
 
     const token =
         localStorage.getItem("token");
 
     const response = await fetch(
-        "http://localhost:8080/menu",
+        "https://queuebite-97yn.onrender.com/menu",
         {
             method: "GET",
 
